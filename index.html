@@ -1,0 +1,117 @@
+<!-- <$ -->
+<!-- stalker lmaoooo-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" id="favicon" type="image/png" href="icon.jpg"> 
+  <script>
+    var titles = ["‎ ", "<", "<$", "<$$", "<$$$", "<$$$$", "<$$$$$","<$$$$$$","<$$$$$", "<$$$$", "<$$$", "<$$", "<$", "<", ">"];
+    var currentIndex = 0;
+
+    function switchTitle() {
+      document.title = titles[currentIndex];
+      currentIndex = (currentIndex + 1) % titles.length;
+    }
+
+    setInterval(switchTitle, 100);
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      overflow: hidden;
+    }
+
+    .terminal {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="terminal" id="terminal">
+    <pre>
+   _______ _    _ _______ _   _  ______ _     _       _______ _______ 
+  |__   __| |  | |__   __| \ | |/  ____| |   | |   /\|__   __|__   __|
+     | |  | |  | |  | |  |  \| | | (___ | |   | |  /  \  | |     | |   
+     | |  | |  | |  | |  | . ` |  \___ \| |   | | / /\ \ | |     | |   
+     | |  | |__| |  | |  | |\  |  ____) | |___| |/ ____ \| |     | |   
+     |_|   \____/   |_|  |_| \_| |_____/|_____/|_/_/    \_\_|     |_|   
+                                                                        
+   _______  ______    _______  _______  _______ _________
+  (  ____ \(  __  \  (  ____ \(  ____ )(  ____ \\__   __/
+  | (    \/| (  \  ) | (    \/| (    )|| (    \/   ) (   
+  | (__    | |   ) | | (__    | (____)|| (__       | |   
+  |  __)   | |   | | |  __)   |     __)|  __)      | |   
+  | (      | |   ) | | (      | (\ (   | (         | |   
+  | )      | (__/  ) | (____/\| ) \ \__| (____/\   | |   
+  |/       (______/  (_______/|/   \__/(_______/   )_(   
+                                                        
+</pre>
+    <p id="initialText"></p>
+  </div>
+
+  <script>
+    async function typeText(text, delay) {
+      return new Promise(resolve => {
+        let index = 0;
+        const intervalId = setInterval(() => {
+          document.getElementById('initialText').textContent += text[index++];
+          if (index === text.length) {
+            clearInterval(intervalId);
+            resolve();
+          }
+        }, delay);
+      });
+    }
+
+    async function displayText() {
+      await typeText(" ________________________________________\n", 10);
+      await typeText("< $ >\n", 1000);
+      await typeText(" ----------------------------------------\n", 10);
+      await typeText("Terms of Service:\n\n", 50);
+      await typeText("$ 1. NO SNITCHING\n", 50);
+      await typeText("Snitching results in permanent blacklist from all services.\n\n", 50);
+      await typeText("$ 2. No Pedo Activity\n\n", 50);
+      await typeText("Participation in any form of pedophilic activity will result in an irrevocable ban from all services.\n\n", 50);
+      await typeText("$ 3. No Abuse of Services\n\n", 50);
+      await typeText("Abuse of services will lead to a permanent ban from all platforms and services.\n\n", 50);
+      await typeText("$ 4. No Spamming\n\n", 50);
+      await typeText("Repeatedly sending unsolicited messages or content will result in punitive action.\n\n", 50);
+      await typeText("$ 5.  Privacy \n\n", 50);
+      await typeText("Anything Private Is Fair Game Because you left it on the open internent.\n\n", 50);
+      await typeText("$ 6.  Malicious Activity Is Fair Game\n\n", 50);
+      await typeText("Any Malicious is Allowed because you are retarded if u click / download it.\n\n", 50);
+      await typeText("$ 7. No Harassment\n\n", 50);
+      await typeText("Harassment or bullying of any kind will not be tolerated and will result in account suspension.\n\n", 50);
+      await typeText("$ 8. Content Guidelines\n\n", 50);
+      await typeText("Ensure all content shared adheres to community guidelines. Violations may lead to content removal.\n\n", 50);
+      await typeText("$ 9. Reporting Violations\n\n", 50);
+      await typeText("Users are encouraged to report any violations of the terms of service for swift action.\n\n", 50);
+      await typeText("$ 10. Regular Updates\n\n", 50);
+      await typeText("Terms of service are subject to change. Users are responsible for staying updated on revisions.\n\n", 50);
+      await typeText("$ Love\n", 50);
+    }
+  </script>
+
+
+
+  <script>
+    displayText();
+  </script>
+</body>
+
+</html>
