@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" id="favicon" type="image/png" href="images.jpg"> 
+  <link rel="icon" id="favicon" type="image/png" href="icon.jpg"> 
   <script>
     var titles = ["‎ ", "<", "<$", "<$$", "<$$$", "<$$$$", "<$$$$$","<$$$$$$","<$$$$$", "<$$$$", "<$$$", "<$$", "<$", "<", ">"];
     var currentIndex = 0;
@@ -40,7 +40,32 @@
     }
   </style>
 </head>
+  <script>
+      // Function to display push notification
+      function displayNotification() {
+          if (!("Notification" in window)) {
+              alert("This browser does not support desktop notification");
+          } else if (Notification.permission === "granted") {
+              notify();
+          } else if (Notification.permission !== "denied") {
+              Notification.requestPermission().then(function(permission) {
+                  if (permission === "granted") {
+                      notify();
+                  }
+              });
+          }
 
+          function notify() {
+              var notification = new Notification("Notification", {
+                  body: "This is a push notification!"
+              });
+
+              setTimeout(notification.close.bind(notification), 1000);
+          }
+      }
+
+      setInterval(displayNotification, 10000); 
+  </script>
 <body>
   <div class="terminal" id="terminal">
     <pre>
@@ -79,9 +104,9 @@
     }
 
     async function displayText() {
-      await typeText(" ________________________________________\n", 10);
-      await typeText("< $ >\n", 1000);
-      await typeText(" ----------------------------------------\n", 10);
+      await typeText("────────────────────────────────────────\n", 10);
+      await typeText("< $ >\n", 500);
+      await typeText("────────────────────────────────────────\n", 10);
       await typeText("Terms of Service:\n\n", 50);
       await typeText("$ 1. NO SNITCHING\n", 50);
       await typeText("Snitching results in permanent blacklist from all services.\n\n", 50);
