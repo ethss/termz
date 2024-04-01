@@ -1,0 +1,14 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 30 Mar 2024 22:06:26 at https://rootedthegame.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://rootedthegame.com/ -O1 "C:\My Web Sites\Rooted" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:06:53	Error: 	"Not Found" (404) at link https://rootedthegame.com/images/favicon.png (from https://rootedthegame.com/)
+22:07:13	Error: 	"Not Found" (404) at link https://rootedthegame.com/images/pattern-bg-2.png (from https://rootedthegame.com/css/style.css)
+22:07:26	Error: 	"Not Found" (404) at link https://rootedthegame.com/news/images/favicon.png (from https://rootedthegame.com/news/stay-safe-from-scam-websites-rooted-community)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 0 seconds : 183 links scanned, 179 files written (47264037 bytes overall) [47216685 bytes received at 786944 bytes/sec], 231370 bytes transferred using HTTP compression in 5 files, ratio 32%, 14.3 requests per connection
+(3 errors, 0 warnings, 0 messages)
